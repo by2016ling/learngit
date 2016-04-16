@@ -12,8 +12,8 @@ Creating a new branch is quick and simple.
 6.删除文件(rm 类似 add，比较绕)：工作区删除了rm，即修改，要更新到暂存区git rm，再更新到版本库git commit。
 7.远程库：了解+关联+克隆
 8.使用分支：创建+切换，...，提交，切换，合并，删除
-9.
-10.
+9.解决冲突：已放在版本库的feather和master内容冲突，发生merge failed后，冲突的文件中会显示两者；修改后，重新add+commit；删除feather指针；可以看分支合并图；
+10.分支管理智慧：合并分支时，Git会默认Fast forward模式，删除分支后，会丢掉分支信息。强制禁用Fast forward模式，Git在merge时生成新的commit，分支历史上会保留分支信息。
 
 
 Unix的哲学是“没有消息就是好消息”，说明添加成功
@@ -52,6 +52,7 @@ git checkout 分支名：	切换分支;
 git checkout -b 分支名：	创建分支，切换到该分支
 ？？(怎么指向)git merge 分支名dev:	合并某dev分支到当前分支；master=dev；
 git branch -d 分支名：	删除某分支；
+git log --graph --pretty=oneline --abbrev-commit：	查看简要的分支合并图；
 
 
 pwd (print working directory)现实工作目录
