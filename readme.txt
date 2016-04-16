@@ -3,7 +3,7 @@ Git is free software,distributed under the GPL.
 Git has a mutable index called stage.
 Git tracks changes of files.
 My stupid boss still prefers SVN.
-Creating a branch is quick;
+Creating a new branch is quick and simple.
 1.自报家门
 2.初始化仓库，添加文件,查看状态
 3.穿越远古，返回未来
@@ -22,17 +22,17 @@ Unix的哲学是“没有消息就是好消息”，说明添加成功
 其实一台电脑上也是可以克隆多个版本库的，只要不在同一个目录下。
 有了远程仓库，妈妈再也不用担心我的硬盘了。”——Git点读机
 确认指纹信息是否真的来自GitHub的服务器，输入yes。
-??HEAD指向的就是当前分支，master指向最新提交，
+？？HEAD指向的就是当前分支，master指向最新提交，
 创建、合并和删除分支非常快，所以用分支完成某个任务，合并后再删掉分支，(直接在master分支上工作效果一样)过程更安全;
-
+？？怎么比较两个指针指向的内容的差别
 
 
 git status：随时掌握仓库(工作区)的状态；
 git diff：查看修改内容(difference)，暂存区[退一步就是版本库]:工作区，绿色字体是新的；
   git diff HEAD -- readme.txt：查看版本库和工作区的区别；
 git log：查看提交历史(从最近到最远)，只能回到从前；
-  git log --pretty=oneline：(commit_id版本号)提交的说明
-git reflog；查看命令历史，能回到未来；
+  git log --pretty=oneline：(commit_id版本号)各次提交的记录；
+git reflog；查看历史，能回到未来；
 
 git checkout -- 文件名：取回暂存区[退一步就是版本库]替代工作区。
 
@@ -41,15 +41,19 @@ git reset --hard HEAD^：工作区版本回退(head指当前版本，^前一个�
 git add/rm 文件名：工作区记录存入暂存区；
 git reset HEAD 文件名：删除暂存区的记录，不影响工作区；
 
+git init	初始化空版本库；
+git commit -m "说明"	提交即更新版本库；
 git push origin master：本地提交上远程库，就可以通过命令：
 git clone 地址：	克隆远程库；
 git branch：	列出所有分支，当前分支前标有*；
-git branch 分支名：	分支名(创建)
-git checkout 分支名：	分支名(切换)
-git checkout -b 分支名：		加上-b参数表示创建并切换
-？？(怎么指向)git merge 分支名:	合并某分支到当前分支；
+git branch 分支名：	创建分支(在当前分支处)；
+git checkout 分支名：	切换分支;
+git checkout -b 分支名：	创建分支，切换到该分支
+？？(怎么指向)git merge 分支名dev:	合并某dev分支到当前分支；master=dev；
 git branch -d 分支名：	删除某分支；
-  
+
+
+pwd (print working directory)现实工作目录
 ls	显示文件
 cat 文件名：显示文件内容；
 cd	cd..	cd / 文件游览
