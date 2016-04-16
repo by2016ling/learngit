@@ -26,7 +26,8 @@ Unix的哲学是“没有消息就是好消息”，说明添加成功
 ？？HEAD指向的就是当前分支，master指向最新提交，
 创建、合并和删除分支非常快，所以用分支完成某个任务，合并后再删掉分支，(直接在master分支上工作效果一样)过程更安全;
 ？？怎么比较两个指针指向的内容的差别
-
+各条分支都能看成一条发展线、特色线；
+实际开发中的某个基本原则：小伙伴们干活，往dev分支合并；dev分支发展到新版本，往master合并；master分支要非常稳定，用于发布；
 
 git status：随时掌握仓库(工作区)的状态；
 git diff：查看修改内容(difference)，暂存区[退一步就是版本库]:工作区，绿色字体是新的；
@@ -47,11 +48,12 @@ git commit -m "说明"	提交即更新版本库；
 git push origin master：本地提交上远程库，就可以通过命令：
 git clone 地址：	克隆远程库；
 git branch：	列出所有分支，当前分支前标有*；
+git branch -d 分支名：	删除某分支；
 git branch 分支名：	创建分支(在当前分支处)；
 git checkout 分支名：	切换分支;
 git checkout -b 分支名：	创建分支，切换到该分支
 git merge 分支名dev:	master下(未详细了解，先保证暂存区为空)，合并某dev分支到当前分支master；即master=dev；
-git branch -d 分支名：	删除某分支；
+git merge --no-ff -m "merge with no-ff" qwe
 git log --graph --pretty=oneline --abbrev-commit：	查看简要的分支合并图；
 
 
