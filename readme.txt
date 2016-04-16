@@ -8,7 +8,8 @@ My stupid boss still prefers SVN.
 3.穿越远古，返回未来
 4.理解：工作区-->(暂存区stage)-->master;
 5.管理修改
-6.删除文件(rm 类似 add)
+6.删除文件(rm 类似 add，比较绕)：工作区删除了rm，即修改，要更新到暂存区git rm，再更新到版本库git commit。
+7.
 
 
 Unix的哲学是“没有消息就是好消息”，说明添加成功
@@ -25,7 +26,7 @@ git reflog；查看命令历史，能回到未来；
 git reset --hard HEAD^：版本回退(head指当前版本，^前一个，^^前两个，~100前一百个)；
   git reset --hard 版本号前n位：(后悔穿越了，窗口还没关)指定回到未来的某个版本；
 git reset HEAD 文件名：退下暂存区的修改，不影响工作区；
-git checkout --文件名：回到最近一次git commit或git add时的状态。
+git checkout -- 文件名：回到最近一次git commit或git add时的状态。
 git rm：删除文件；
 
 
