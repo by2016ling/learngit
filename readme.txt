@@ -3,7 +3,7 @@ Git is free software,distributed under the GPL.
 Git has a mutable index called stage.
 Git tracks changes of files.
 My stupid boss still prefers SVN.
-Creating a new branch is quick and simple.
+Creating a new branch is quick && simple.
 1.自报家门
 2.初始化仓库，添加文件,查看状态
 3.穿越远古，返回未来
@@ -13,6 +13,7 @@ Creating a new branch is quick and simple.
 7.远程库：了解+关联+克隆
 8.使用分支：创建+切换，...，提交，切换，合并，删除
 
+10.
 
 
 Unix的哲学是“没有消息就是好消息”，说明添加成功
