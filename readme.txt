@@ -1,4 +1,4 @@
-﻿Git is a version control system.
+﻿Git is a distributed version control system.
 Git is free software.
 1.自报家门
 2.初始化仓库，添加文件
